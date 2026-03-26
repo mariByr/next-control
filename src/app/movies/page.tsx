@@ -1,20 +1,21 @@
-import {IMovie} from "@/models/IMovie";
+import {IMovie} from "@/models/movi-models/IMovie";
 import {getMovies, searchMovies} from "@/services/api.services";
-import {GenreList} from "@/components/GenreList";
+import {GenreList} from "@/components/genre-list/GenreList";
 import {MovieList} from "@/components/MovieList";
-import {Pagination} from "@/components/Pagination";
+import {Pagination} from "@/components/pagination/Pagination";
 type Props={
-    searchParams:Promise<{
+    searchParams:{
         page: number,
         genreId?: number,
         search: string,
-    }>
+    }
 }
 
 export default async function MoviePage( {searchParams}:Props){
     const params=await searchParams;
     const page=Number(params.page) ||1;
-    const genreId=Number(params.genreId) || undefined;
+    const activeGenre=Number(params.genreId)
+
 
     const search=params.search ;
 
@@ -23,17 +24,18 @@ export default async function MoviePage( {searchParams}:Props){
     if (search) {
         response = await searchMovies(search, page);
     } else {
-        response = await getMovies(page, genreId);
+        response = await getMovies(page,   activeGenre);
     }
     const movies:IMovie[] = response.results;
+    const totalPage=response.total_pages
 
     return (
         <div className="min-h-screen">
-            <main >
+            <main className={'flex flex-col items-center gap-10'}>
 
-                <GenreList genreId={genreId} />
+                <GenreList activeGenre={activeGenre} page={page} />
                 <MovieList movies={movies} />
-                <Pagination page={page}/>
+                <Pagination page={page} totalPages={totalPage}  activeGenre={activeGenre}/>
             </main>
         </div>
     );

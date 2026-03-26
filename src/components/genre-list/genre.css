@@ -1,0 +1,16 @@
+.genre-list {
+    width: 1200px;
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    border: 1px solid silver;
+    gap: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 6px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

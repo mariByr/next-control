@@ -1,5 +1,5 @@
-import {IMovie} from "@/models/IMovie";
-import {MovieListCard} from "@/components/MovieListCard";
+import {IMovie} from "@/models/movi-models/IMovie";
+import {MovieListCard} from "@/components/movie-card/MovieListCard";
 
 interface MovieListProps {
     movies: IMovie[]

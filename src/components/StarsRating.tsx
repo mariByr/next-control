@@ -1,9 +1,9 @@
-interface StarsRatingProps {
-    rating?: number
+import type {FC} from "react";
+
+interface IStarsRatingProps {
+    rating: number;
 }
 
-export const StarsRating = ({rating}: StarsRatingProps) => {
-    return (
-        <></>
-    );
+export const StarsRating: FC<IStarsRatingProps> = ({ rating }) => {
+    return <div className={'mb-4'}>⭐ {rating}</div>;
 };

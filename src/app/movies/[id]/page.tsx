@@ -1,3 +1,4 @@
+import {MovieInfo} from "@/components/moviDetails/MovieInfo";
 
 type Props= {
     params: Promise<{
@@ -10,7 +11,7 @@ const MovieDetailsPage =async ({params}:Props) => {
     const id= Number(promisedParams.id);
     return (
         <div>
-            Movie ID: {id}
+            <MovieInfo id={id} />
         </div>
     );
 };

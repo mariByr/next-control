@@ -1,0 +1,13 @@
+.active {
+    background-color: plum;
+    font-weight: bold;
+}
+.page-link{
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 40px;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

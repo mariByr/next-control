@@ -1,39 +1,39 @@
-
 'use client';
 
+import { useRouter, useSearchParams, usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { useRouter, usePathname, useSearchParams } from 'next/navigation';
-import './search.css'
 
-export default function SearchInput() {
+export const SearchComponent = () => {
     const router = useRouter();
-    const pathname = usePathname();
+ const pathname = usePathname();
     const searchParams = useSearchParams();
 
-    const [value, setValue] = useState(searchParams.get('search') || '');
+    const search = searchParams.get('search') || '';
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const [q, setQ] = useState(search);
+
+    const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
         const params = new URLSearchParams(searchParams.toString());
 
-        if (value.trim()) {
-            params.set('search', value.trim());
+        if (q) {
+            params.set('search', q);
         } else {
             params.delete('search');
         }
 
-        router.push(`/movies?${params.toString()}`);
+        router.push(`${pathname}?${params.toString()}`);
     };
 
     return (
-        <form  className={'search-form'} onSubmit={handleSubmit}>
-            <input id={'search-input'}
-                value={value}
-                onChange={(e) => setValue(e.target.value)}
-                placeholder="Enter a name ..."
+        <form onSubmit={handleSubmit}>
+            <input
+                key={search}
+                value={q}
+                onChange={(e) => setQ(e.target.value)}
             />
-            <button className={'button-submit'} type="submit">Search</button>
+            <button type="submit">Search</button>
         </form>
     );
-}
+};
