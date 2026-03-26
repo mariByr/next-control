@@ -17,7 +17,7 @@ export const Header= ()=>{
             </Link>
             <SearchComponent />
             <ThemeComponent/>
-            <UserComponent/>
+            <UserComponent name={'mary'}/>
 
         </div>
     );

@@ -3,11 +3,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    height: 150px;
 }
 .logo {
     text-decoration: none;
     color: purple;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 header span{

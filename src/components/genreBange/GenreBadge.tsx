@@ -12,7 +12,7 @@ type GenreBadgeProps = {
 };
 export const GenreBadge = ({ genre, activeGenre }: GenreBadgeProps) => {
 
-console.log('htylth');
+
     const searchParams = useSearchParams();
 
     console.log('genre', genre.id);
