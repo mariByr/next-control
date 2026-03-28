@@ -1,8 +1,9 @@
 import {IMovie} from "@/models/movi-models/IMovie";
 import {getMovies, searchMovies} from "@/services/api.services";
 import {GenreList} from "@/components/genre-list/GenreList";
-import {MovieList} from "@/components/MovieList";
+import {MovieList} from "@/components/moviList/MovieList";
 import {Pagination} from "@/components/pagination/Pagination";
+
 type Props={
     searchParams:{
         page: number,
@@ -35,7 +36,7 @@ export default async function MoviePage( {searchParams}:Props){
 
                 <GenreList activeGenre={activeGenre} page={page} />
                 <MovieList movies={movies} />
-                <Pagination page={page} totalPages={totalPage}  activeGenre={activeGenre}/>
+                <Pagination page={page} totalPages={totalPage} />
             </main>
         </div>
     );

@@ -6,7 +6,7 @@ interface CastsComponentProps {
 
 export const CastsComponent = ({cast}: CastsComponentProps) => {
     return (
-        <p >
+        <p  className={'whitespace-nowrap'}>
             {cast.original_name}
         </p>
     );

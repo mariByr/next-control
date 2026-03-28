@@ -1,0 +1,27 @@
+.movie-list {
+    margin: 0 auto;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+    align-items: center;
+    justify-items: center;
+}
+
+@media (min-width: 481px) {
+    .movie-list  {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 768px) {
+    .movie-list  {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 16px;
+    }}
+/* 1280 і більше */
+@media (min-width: 1280px) {
+    .movie-list {
+        grid-template-columns: repeat(5, 1fr);
+        padding: 0 16px;
+    }
+}

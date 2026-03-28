@@ -1,12 +1,13 @@
 import {getCast, getFilmById, getReviews, getVideo} from "@/services/api.services";
 import {IDetailFilms} from "@/models/movi-models/IDetailFilms";
-import'./movieInfo.css'
 import {PosterPreview} from "@/components/PosterPreview";
 import {GenreBadge} from "@/components/genreBange/GenreBadge";
 import {CastsComponent} from "@/components/casts/CastsComponent";
 import {VideoComponent} from "@/components/video/VideoComponent";
 import {IVideo} from "@/models/video-models/IVideo";
 import {ReviewsDropdown} from "@/components/dropdown/ReviewsDropdown";
+
+import'./movieInfo.css'
 
 interface MovieInfoProps {
     id: number
@@ -51,7 +52,7 @@ export const MovieInfo = async ({id}: MovieInfoProps) => {
         </div>
 
     <div className={'video'}>
-        <h2>Watch a movie </h2>
+        <h2>Watch a trailer </h2>
         <div><VideoComponent videos={videos}/></div>
         <div><p><strong>What is this movie about?</strong></p>
             <p>{film.overview}</p></div>

@@ -1,16 +1,23 @@
-.genre-list {
-    width: 1200px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    overflow-x: auto;
-    white-space: nowrap;
-    padding-bottom: 6px;
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:10px;
 }
+@media (min-width: 768px){
+    .genre-list {
+        max-width: 1200px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 6px;
+    }
 
-.container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
+    .container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+    }
 }

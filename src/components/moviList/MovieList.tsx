@@ -1,5 +1,6 @@
 import {IMovie} from "@/models/movi-models/IMovie";
 import {MovieListCard} from "@/components/movie-card/MovieListCard";
+import './list.css'
 
 interface MovieListProps {
     movies: IMovie[]
@@ -8,7 +9,7 @@ interface MovieListProps {
 export const MovieList = ({movies}: MovieListProps) => {console.log(movies)
 
     return (
-        <div className="w-full  grid grid-cols-4 gap-4 p-4 ">
+        <div className="movie-list">
             {
                 movies?.map((movie:IMovie) => (
                     <MovieListCard key={movie.id} movie={movie}/>))

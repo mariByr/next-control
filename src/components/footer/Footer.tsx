@@ -1,5 +1,6 @@
 
 import  './footer.css'
+import Link from "next/link";
 export const Footer = () => {
     return (
         <footer className="footer">
@@ -7,18 +8,20 @@ export const Footer = () => {
             <div className="footer-group">
                 <div>
                     <h3>About project</h3>
-                    <p>Movie search application built with React and TypeScript.</p>
+                    <p>Movie search application built with NextJS and TypeScript.</p>
                 </div>
 
                 {/* Links */}
                 <div>
                     <h3>Useful links</h3>
                     <ul>
-
+                        <Link href={'/'}><li>Home</li></Link>
+                        <Link href={'#'}><li>GitHub</li></Link>
+                        <Link href={'#'}><li>TMBD</li></Link>
                     </ul>
+
                 </div>
 
-                {/* API */}
                 <div>
                     <h3>API</h3>
                     <p className="text-min">

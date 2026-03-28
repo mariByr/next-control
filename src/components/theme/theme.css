@@ -1,0 +1,19 @@
+
+
+
+
+    .theme-toggle{
+    width: 100px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    /*justify-content: center;*/
+    cursor: pointer;
+    padding: 10px;
+    align-items: center;
+}
+
+.theme-toggle:hover{
+    background-color: plum;
+}

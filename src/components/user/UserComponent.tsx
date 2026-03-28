@@ -4,7 +4,7 @@ type Props = {
 
 export const UserComponent = ({ name }: Props) => {
     return (
-        <div className="w-12 h-12 rounded-full bg-blue-500 text-white flex items-center justify-center font-semibold">
+        <div className="order-first md:order-none w-12 h-12 rounded-full bg-blue-500 text-white flex items-center justify-center font-semibold">
             {name}
         </div>
     );

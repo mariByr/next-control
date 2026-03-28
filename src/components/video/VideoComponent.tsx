@@ -1,5 +1,5 @@
 import {IVideo} from "@/models/video-models/IVideo";
-
+import './video.css'
 interface VideoComponentProps {
     videos: IVideo[]
 }

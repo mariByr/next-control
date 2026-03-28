@@ -7,10 +7,10 @@ import './pagination.css'
 type PaginationProps = {
     page: number,
     totalPages: number,
-    activeGenre?: number
+
 };
 
-export const Pagination = ({page, totalPages, activeGenre}: PaginationProps) => {
+export const Pagination = ({page, totalPages, }: PaginationProps) => {
     const searchParams = useSearchParams();
     const pathname = usePathname();
 
@@ -28,7 +28,7 @@ export const Pagination = ({page, totalPages, activeGenre}: PaginationProps) => 
     const hasNext = page < totalPages;
 
     return (
-        <div className="flex gap-4">
+        <div className="pagination">
 
             {/* PREV */}
             {hasPrev && (() => {
@@ -46,7 +46,7 @@ export const Pagination = ({page, totalPages, activeGenre}: PaginationProps) => 
             {pages.map((num) => {
                 const params = new URLSearchParams(searchParams);
                 params.set('page', String(num));
-                const isActive = num === page;
+
 
                 return (
                     <Link

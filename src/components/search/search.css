@@ -19,8 +19,10 @@
     height: 40px;
     border-radius: 8px;
     border: 1px solid gray;
+    display: flex;
+    justify-content: center;
 
 }
 .button-submit:hover {
-    background-color: lightgray;
+    background-color: plum;
 }

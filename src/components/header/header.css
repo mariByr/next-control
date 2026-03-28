@@ -1,10 +1,9 @@
-.header-group {
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 150px;
+@media(max-width:767px){
+    .header-group {
+    display:flex;
+    flex-direction: column;
+        gap: 10px;
+        padding: 10px;
 }
 .logo {
     text-decoration: none;
@@ -15,18 +14,24 @@
 header span{
     font-size:20px;
     color: purple;
-}
+}}
 
-.theme-toggle{
-    width: 70px;
-    height: 36px;
-    border: none;
+@media (min-width: 768px){
+    .header-group {
+    padding: 10px;
     display: flex;
-    justify-content: center;
-    border-radius: 999px;
-    background: #000;
-    position: relative;
-    cursor: pointer;
-    padding: 0;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    height: 150px;
 }
+    .logo {
+        text-decoration: none;
+        color: purple;
+        font-size: 40px;
+    }
+
+    header span{
+        font-size:20px;
+        color: purple;
+    }}
