@@ -19,10 +19,11 @@ const MovieDetailsPage =async ({params}:Props) => {
     const promisedParams=await params
     const id= Number(promisedParams.id);
     return (
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-[1400px] mx-auto px-6">
             <MovieInfo id={id} />
         </div>
     );
 };
 
 export default MovieDetailsPage;
+//max-w-7xl mx-auto
