@@ -8,9 +8,9 @@ type GenreBadgeProps = {
         id: number;
         name: string;
     };
-    activeGenre?: number;
+
 };
-export const GenreBadge = ({ genre, activeGenre }: GenreBadgeProps) => {
+export const GenreBadge = ({ genre, }: GenreBadgeProps) => {
 
 
     const searchParams = useSearchParams();
@@ -43,4 +43,3 @@ export const GenreBadge = ({ genre, activeGenre }: GenreBadgeProps) => {
         </Link>
     );
 };
-// <Link href={`/movies?genreId=${genre.id}`}>

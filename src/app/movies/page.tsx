@@ -33,8 +33,10 @@ export default async function MoviePage( {searchParams}:Props){
     return (
         <div className="min-h-screen">
             <main className={'flex flex-col items-center gap-10'}>
-
-                <GenreList activeGenre={activeGenre} page={page} />
+                <GenreList />
+                {search && movies && movies.length === 0 && (
+                    <p className={'text-red-500'}>Nothing was found for your request.</p>
+                )}
                 <MovieList movies={movies} />
                 <Pagination page={page} totalPages={totalPage} />
             </main>

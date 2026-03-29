@@ -4,8 +4,8 @@
     gap:10px
 }
 #search-input {
-    padding: 8px 12px;
-    width: 250px;
+    padding: 6px 8px;
+    width: 200px;
     height: 40px;
     border-radius: 8px;
     border: 1px solid gray;
@@ -26,3 +26,33 @@
 .button-submit:hover {
     background-color: plum;
 }
+
+@media (min-width: 768px){
+.search-form {
+    display: flex;
+    flex-direction: row;
+    gap:10px
+}
+#search-input {
+    padding: 8px 12px;
+   min-width: 200px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid gray;
+    text-align: center;
+
+}
+
+.button-submit {
+    padding: 8px 12px;
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+
+}
+.button-submit:hover {
+    background-color: plum;
+}}

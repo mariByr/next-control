@@ -3,12 +3,9 @@ import {IGenre} from "@/models/genres/IGenre";
 import {GenreBadge} from "@/components/genreBange/GenreBadge";
 import'./genre.css'
 
-interface GenreListProps {
-    activeGenre: number
-    page?: number,
-}
 
-export const GenreList = async ({activeGenre, page, }: GenreListProps) => {
+
+export const GenreList = async () => {
     const data = await getGenres();
     const genres = data.genres;
     const genresWithAll = [
@@ -22,7 +19,6 @@ export const GenreList = async ({activeGenre, page, }: GenreListProps) => {
             {
                 genresWithAll.map((genre: IGenre) => (
                     <GenreBadge key={genre.id}
-                                activeGenre={activeGenre}
                                 genre={genre}/>
 
 

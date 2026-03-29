@@ -6,7 +6,7 @@ interface MovieListProps {
     movies: IMovie[]
 }
 
-export const MovieList = ({movies}: MovieListProps) => {console.log(movies)
+export const MovieList = ({movies}: MovieListProps) => {
 
     return (
         <div className="movie-list">
